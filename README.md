@@ -4,9 +4,10 @@
 
 
 DNSOP                                                   T. Wicinski, Ed.
-Internet-Draft                                          21 November 2025
-Intended status: Standards Track                                        
-Expires: 25 May 2026
+Internet-Draft                                          30 November 2025
+Updates: 6603 (if approved)                                             
+Intended status: Best Current Practice                                  
+Expires: 3 June 2026
 
 
              Revision to Locally Served DNS Zones Registry
@@ -14,7 +15,10 @@ Expires: 25 May 2026
 
 Abstract
 
-   Changes to Locally served dns zones
+   RFC 6063, "Locally Served DNS Zones", defines an IANA registry called
+   "Locally-Served DNS Zones".  This document changes the registration
+   procedure for that registry from "IETF Review" to "Expert Review".
+   This document updates RFC 6063.
 
 Status of This Memo
 
@@ -31,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 May 2026.
+   This Internet-Draft will expire on 3 June 2026.
 
 Copyright Notice
 
@@ -50,11 +54,7 @@ Copyright Notice
 
 
 
-
-
-
-
-Wicinski                   Expires 25 May 2026                  [Page 1]
+Wicinski                   Expires 3 June 2026                  [Page 1]
 
 Internet-Draft                 rfc6303-bis                 November 2025
 
@@ -63,12 +63,13 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
+     2.1.  Updates to 6063 . . . . . . . . . . . . . . . . . . . . .   2
    3.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   2
      3.1.  Normative References  . . . . . . . . . . . . . . . . . .   2
-     3.2.  Informative References  . . . . . . . . . . . . . . . . .   2
-   Appendix A.  Appendix . . . . . . . . . . . . . . . . . . . . . .   2
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     3.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+   Appendix A.  Appendix . . . . . . . . . . . . . . . . . . . . . .   3
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
 
 1.  Introduction
 
@@ -81,9 +82,38 @@ Table of Contents
    capitals, as shown here.  DNS terminology is as described in
    [RFC8499].
 
+2.1.  Updates to 6063
+
+   OLD:
+
+   This registry can be amended through "IETF Review" as per [RFC5226].
+   As part of this review process, it should be noted that once a zone
+   is added it is effectively added permanently; once an address range
+   starts being configured as a local zone in systems on the Internet,
+   it will be impossible to reverse those changes.
+
+   NEW:
+
+   This registry can be amended through "Expert Review" policy
+   (Section 4.5 of [RFC8126]).  As part of this review process, it
+   should be noted that once a zone is added it is effectively added
+   permanently; once an address range starts being configured as a local
+   zone in systems on the Internet, it will be impossible to reverse
+   those changes.  More guidance for Designated Experts is provided in
+   Section TBD.
+
 3.  References
 
 3.1.  Normative References
+
+
+
+
+
+Wicinski                   Expires 3 June 2026                  [Page 2]
+
+Internet-Draft                 rfc6303-bis                 November 2025
+
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -105,15 +135,6 @@ Appendix A.  Appendix
 Acknowledgements
 
 Author's Address
-
-
-
-
-
-Wicinski                   Expires 25 May 2026                  [Page 2]
-
-Internet-Draft                 rfc6303-bis                 November 2025
-
 
    Tim Wicinski (editor)
    Elkins, WV 26241
@@ -145,26 +166,5 @@ Internet-Draft                 rfc6303-bis                 November 2025
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Wicinski                   Expires 25 May 2026                  [Page 3]
+Wicinski                   Expires 3 June 2026                  [Page 3]
 ```
