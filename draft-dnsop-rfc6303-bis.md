@@ -1,10 +1,10 @@
 %%%
-title = "Revision to Locally Served DNS Zones Registry"
-abbrev = "rfc6303-bis"
+title = "Updates to Locally Served DNS Zones and IP Special-Purpose Address Space Registries"
+abbrev = "Updates to RFCs 6303 and 6890"
 docName = "@DOCNAME@"
-updates = [6603]
+updates = [6603, 6890]
 ipr = "trust200902"
-area = "Internet"
+area = "OPS"
 workgroup = "DNSOP"
 submissiontype = "IETF"
 keyword = ["DNS", "IANA"]
@@ -34,18 +34,26 @@ role = "editor"
 .# Abstract
 
 RFC 6063, "Locally Served DNS Zones", defines two IANA registries called
-"IPv4 Locally-Served DNS Zone Registry" and "IPv6 Locally-Served DNS Zone Registry".
-This document changes the registration procedure for
-that registry from "IETF Review" to "Expert Review".  This document updates RFC 6063.
+"IPv4 Locally-Served DNS Zone" and "IPv6 Locally-Served DNS Zone" registries.
+This document changes the registration policy for
+that registry from "IETF Review" to "Expert Review".
+
+Also, this document updates IP Special-Purpose Address Space registries to indicate whether
+an IP address block is eligible to be in Locally-Served DNS Zones.
+
+This document updates RFC 6063 and RFC 6890.
 
 {mainmatter}
 
 # Introduction {#introduction}
 
 In [@!RFC6303]  "Locally Served DNS Zones", it defines two IANA registries called
-"IPv4 Locally-Served DNS Zone Registry" and "IPv6 Locally-Served DNS Zone Registry".
-This document changes the registration procedure for
+"IPv4 Locally-Served DNS Zone" and "IPv6 Locally-Served DNS Zone" registries.
+This document changes the registration policy for
 that registry from "IETF Review" to "Expert Review".
+
+Also, this document updates IP Special-Purpose Address Space registries {{!RFC6890}} to indicate whether
+an IP address block is eligible to be in Locally-Served DNS Zones.
 
 PLEASE REMOVE THE FOLLOWING PARAGRAPH BEFORE PUBLISHING:
 The source for this draft is maintained on GitHub at:
@@ -59,29 +67,31 @@ document are to be interpreted as described in BCP 14 [@!RFC2119] [@RFC8174]
 when, and only when, they appear in all capitals, as shown here.
 DNS terminology is as described in [@?RFC8499].
 
-## Updates to 6063 {#updates}
+# Updates to RFC 6063 {#6063-updates}
 
-Please update Section 8 of [@!RFC6303] "IANA Considerations" with the following text:
+Please update {{Section 8 of @!RFC6303}} "IANA Considerations" as follows:
 
 OLD:
 
-   This registry can be amended through "IETF Review" as per [RFC5226].
-   As part of this review process, it should be noted that once a zone
-   is added it is effectively added permanently; once an address range
-   starts being configured as a local zone in systems on the Internet,
-   it will be impossible to reverse those changes.
+{:quote}
+>   This registry can be amended through "IETF Review" as per {{?RFC5226}}.
+>   As part of this review process, it should be noted that once a zone
+>   is added it is effectively added permanently; once an address range
+>   starts being configured as a local zone in systems on the Internet,
+>   it will be impossible to reverse those changes.
 
 
 NEW:
 
-   This registry can be amended through "Expert Review" policy (Section 4.5 of [RFC8126]).
-   As part of this review process, it should be noted that once a zone
-   is added it is effectively added permanently; once an address range
-   starts being configured as a local zone in systems on the Internet,
-   it will be impossible to reverse those changes. More guidance for Designated
-   Experts is provided in Section TBD.
+{:quote}
+>  This registry can be amended through "Expert Review" policy ({{Section 4.5 of !RFC8126}}).
+>  As part of this review process, it should be noted that once a zone
+>  is added it is effectively added permanently; once an address range
+>  starts being configured as a local zone in systems on the Internet,
+>  it will be impossible to reverse those changes. More guidance for Designated
+>  Experts is provided in {{guidance}} of THIS_DOCUMENT.
 
-## Guidance for Expert Reviews {#guidance}
+## Guidance for Designated Experts {#guidance}
 
 In changing the approval to "Expert Review", there should be some additional guidance.
 Here are some examples (not all mandatory) on what the Reviewer should look for:
@@ -92,10 +102,63 @@ Here are some examples (not all mandatory) on what the Reviewer should look for:
 
 3. Must be approved by someone named Tim.
 
+## Changes to the IPv6 Locally-Served DNS Zones Registry
+
+IANA is request to add the zones listed below to the "IPv6 Locally-Served DNS Zone" registry:
+
+TBC with {{!RFC9637}} entries.
+
+#  Changes to the IP Special-Purpose Space Registries {#6890-updates}
+
+## Eligible to Locally-Served DNS Zones New Column
+
+IANA is requested to add a new column, Eligible to Locally-Served DNS Zones, to the "IPv6 Special-Purpose Address Space" and "IPv4 Special-Purpose Address Space" registries.
+
+## Eligible to Locally-Served DNS Zones Note
+
+IANA is requested to add the following note to the "IPv6 Special-Purpose Address Space" and "IPv4 Special-Purpose Address Space" registries:
+
+Eligible to Locally-Served DNS Zones:
+: A boolean value indicating whether the IP address block is to be added to the Locally-Served DNS Zones IANA
+  registry.
+
+## IPv6 Locally-Served DNS Zone Registry Note
+
+IANA is requested to add the following note to the "IPv6 Special-Purpose Address Space" registry:
+
+Note:
+: IANA has to add relevant entries for "Eligible to Locally-Served DNS Zones"
+set to "True" in the IPv6 Locally-Served DNS Zone Registry.
+
+## IPv4 Locally-Served DNS Zone Registry Note
+
+IANA is requested to add the following note to the "IPv4 Special-Purpose Address Space" registry:
+
+Note:
+: IANA has to add relevant entries for "Eligible to Locally-Served DNS Zones"
+set to "True" in the IPv4 Locally-Served DNS Zone Registry.
+
+## Initial IPv6 Locally-Served DNS Zone Registry
+
+TBC.
+
+## Initial IPv4 Locally-Served DNS Zone Registry 
+
+TBC.
+
+# Operational Considerations
+
+TBC.
+
+# Security Considerations
+
+This document does not add new security risks other than those already discussed in {{RFC6303}}, {{!RFC6890}}, and {{!RFC9637}}.
+
+# IANA Considerations
+
+Sections {{<6063-updates}} and {{<6890-updates}} include actions for IANA. These actions are not repeated here.
+
 {backmatter}
-
-# Appendix
-
 
 {numbered="false"}
 
