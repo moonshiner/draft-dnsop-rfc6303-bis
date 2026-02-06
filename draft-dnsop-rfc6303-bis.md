@@ -39,7 +39,8 @@ This document changes the registration policy for
 that registry from "IETF Review" to "Expert Review".
 
 Also, this document updates IP Special-Purpose Address Space registries to indicate whether
-an IP address block is eligible to be in Locally-Served DNS Zones.
+an IP address block is eligible to be in Locally-Served DNS Zones. Eligible entries will
+be automatically added to the Locally-Served DNS Zones.
 
 This document updates RFC 6063 and RFC 6890.
 
@@ -47,13 +48,16 @@ This document updates RFC 6063 and RFC 6890.
 
 # Introduction {#introduction}
 
-In [@!RFC6303]  "Locally Served DNS Zones", it defines two IANA registries called
+[@!RFC6303]  "Locally Served DNS Zones", it defines two IANA registries called
 "IPv4 Locally-Served DNS Zone" and "IPv6 Locally-Served DNS Zone" registries.
 This document changes the registration policy for
 that registry from "IETF Review" to "Expert Review".
 
 Also, this document updates IP Special-Purpose Address Space registries {{!RFC6890}} to indicate whether
-an IP address block is eligible to be in Locally-Served DNS Zones.
+an IP address block is eligible to be in Locally-Served DNS Zones. This change is meant
+to ensure consistent registrations between the above registries and future failures
+to make appropriate registrations in "IPv6 Locally-Served DNS Zone" such as in {{!RFC9637}}.
+
 
 PLEASE REMOVE THE FOLLOWING PARAGRAPH BEFORE PUBLISHING:
 The source for this draft is maintained on GitHub at:
@@ -104,7 +108,7 @@ Here are some examples (not all mandatory) on what the Reviewer should look for:
 
 ## Changes to the IPv6 Locally-Served DNS Zones Registry
 
-IANA is request to add the zones listed below to the "IPv6 Locally-Served DNS Zone" registry:
+IANA is requested to add the zones listed below to the "IPv6 Locally-Served DNS Zone" registry:
 
 TBC with {{!RFC9637}} entries.
 
