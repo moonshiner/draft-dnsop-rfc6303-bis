@@ -71,7 +71,7 @@ document are to be interpreted as described in BCP 14 [@!RFC2119] [@RFC8174]
 when, and only when, they appear in all capitals, as shown here.
 DNS terminology is as described in [@?RFC8499].
 
-# Updates to RFC 6063 {#6063-updates}
+# Updates to RFC 6063 {#updates-6063}
 
 Please update {{Section 8 of @!RFC6303}} "IANA Considerations" as follows:
 
@@ -104,15 +104,13 @@ Here are some examples (not all mandatory) on what the Reviewer should look for:
 
 2. The various Working Groups in the IETF should have
 
-3. Must be approved by someone named Tim.
-
 ## Changes to the IPv6 Locally-Served DNS Zones Registry
 
 IANA is requested to add the zones listed below to the "IPv6 Locally-Served DNS Zone" registry:
 
 TBC with {{!RFC9637}} entries.
 
-#  Changes to the IP Special-Purpose Space Registries {#6890-updates}
+# Changes to the IP Special-Purpose Space Registries {#updates-6890}
 
 ## Eligible to Locally-Served DNS Zones New Column
 
@@ -146,7 +144,7 @@ set to "True" in the IPv4 Locally-Served DNS Zone Registry.
 
 TBC.
 
-## Initial IPv4 Locally-Served DNS Zone Registry 
+## Initial IPv4 Locally-Served DNS Zone Registry
 
 TBC.
 
@@ -160,7 +158,7 @@ This document does not add new security risks other than those already discussed
 
 # IANA Considerations
 
-Sections {{<6063-updates}} and {{<6890-updates}} include actions for IANA. These actions are not repeated here.
+Sections 6063-updates and 6890-updates include actions for IANA. These actions are not repeated here.
 
 {backmatter}
 
