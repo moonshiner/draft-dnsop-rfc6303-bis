@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.miek.nl" -->
+<rfc version="3" ipr="trust200902" docName="draft-dnsop-rfc6303-bis-01" submissionType="IETF" category="bcp" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude" updates="6603, 6890" indexInclude="true">
+
+<front>
+<title abbrev="Updates to RFCs 6303 and 6890">Updates to Locally Served DNS Zones and IP Special-Purpose Address Space Registries</title><seriesInfo value="draft-dnsop-rfc6303-bis-01" stream="IETF" status="bcp" name="Internet-Draft"></seriesInfo>
+<author role="editor" initials="T." surname="Wicinski" fullname="Tim Wicinski"><organization></organization><address><postal><street></street>
+<city>Elkins</city>
+<code>26241</code>
+<country>USA</country>
+<region>WV</region>
+</postal><email>tjw.ietf@gmail.com</email>
+</address></author><date/>
+<area>OPS</area>
+<workgroup>DNSOP</workgroup>
+<keyword>DNS</keyword>
+<keyword>IANA</keyword>
+
+<abstract>
+<t>RFC 6063, &quot;Locally Served DNS Zones&quot;, defines two IANA registries called
+&quot;IPv4 Locally-Served DNS Zone&quot; and &quot;IPv6 Locally-Served DNS Zone&quot; registries.
+This document changes the registration policy for
+that registry from &quot;IETF Review&quot; to &quot;Expert Review&quot;.</t>
+<t>Also, this document updates IP Special-Purpose Address Space registries to indicate whether
+an IP address block is eligible to be in Locally-Served DNS Zones. Eligible entries will
+be automatically added to the Locally-Served DNS Zones.</t>
+<t>This document updates RFC 6063 and RFC 6890.</t>
+</abstract>
+
+</front>
+
+<middle>
+
+<section anchor="introduction"><name>Introduction</name>
+<t><xref target="RFC6303"></xref>  &quot;Locally Served DNS Zones&quot;, it defines two IANA registries called
+&quot;IPv4 Locally-Served DNS Zone&quot; and &quot;IPv6 Locally-Served DNS Zone&quot; registries.
+This document changes the registration policy for
+that registry from &quot;IETF Review&quot; to &quot;Expert Review&quot;.</t>
+<t>Also, this document updates IP Special-Purpose Address Space registries {{!RFC6890}} to indicate whether
+an IP address block is eligible to be in Locally-Served DNS Zones. This change is meant
+to ensure consistent registrations between the above registries and future failures
+to make appropriate registrations in &quot;IPv6 Locally-Served DNS Zone&quot; such as in {{!RFC9637}}.</t>
+<t>PLEASE REMOVE THE FOLLOWING PARAGRAPH BEFORE PUBLISHING:
+The source for this draft is maintained on GitHub at:
+<eref target="https://github.com/moonshiner/draft-dnsop-rfc6303-bis">https://github.com/moonshiner/draft-dnsop-rfc6303-bis</eref></t>
+</section>
+
+<section anchor="terminology"><name>Terminology</name>
+<t>The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;,
+&quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;NOT RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this
+document are to be interpreted as described in BCP 14 <xref target="RFC2119"></xref> <xref target="RFC8174"></xref>
+when, and only when, they appear in all capitals, as shown here.
+DNS terminology is as described in <xref target="RFC8499"></xref>.</t>
+</section>
+
+<section anchor="updates-6063"><name>Updates to RFC 6063</name>
+<t>Please update {{Section 8 of @!RFC6303}} &quot;IANA Considerations&quot; as follows:</t>
+<t>OLD:</t>
+<t>{:quote}</t>
+<blockquote><t>This registry can be amended through &quot;IETF Review&quot; as per {{?RFC5226}}.
+  As part of this review process, it should be noted that once a zone
+  is added it is effectively added permanently; once an address range
+  starts being configured as a local zone in systems on the Internet,
+  it will be impossible to reverse those changes.</t>
+</blockquote><t>NEW:</t>
+<t>{:quote}</t>
+<blockquote><t>This registry can be amended through &quot;Expert Review&quot; policy ({{Section 4.5 of !RFC8126}}).
+ As part of this review process, it should be noted that once a zone
+ is added it is effectively added permanently; once an address range
+ starts being configured as a local zone in systems on the Internet,
+ it will be impossible to reverse those changes. More guidance for Designated
+ Experts is provided in {{guidance}} of THIS_DOCUMENT.</t>
+</blockquote>
+<section anchor="guidance"><name>Guidance for Designated Experts</name>
+<t>In changing the approval to &quot;Expert Review&quot;, there should be some additional guidance.
+Here are some examples (not all mandatory) on what the Reviewer should look for:</t>
+
+<ol>
+<li><t>Should have at least an internet-draft written which can explain the usage.</t>
+</li>
+<li><t>The various Working Groups in the IETF should have</t>
+</li>
+</ol>
+</section>
+
+<section anchor="changes-to-the-ipv6-locally-served-dns-zones-registry"><name>Changes to the IPv6 Locally-Served DNS Zones Registry</name>
+<t>IANA is requested to add the zones listed below to the &quot;IPv6 Locally-Served DNS Zone&quot; registry:</t>
+<t>TBC with {{!RFC9637}} entries.</t>
+</section>
+</section>
+
+<section anchor="updates-6890"><name>Changes to the IP Special-Purpose Space Registries</name>
+
+<section anchor="eligible-to-locally-served-dns-zones-new-column"><name>Eligible to Locally-Served DNS Zones New Column</name>
+<t>IANA is requested to add a new column, Eligible to Locally-Served DNS Zones, to the &quot;IPv6 Special-Purpose Address Space&quot; and &quot;IPv4 Special-Purpose Address Space&quot; registries.</t>
+</section>
+
+<section anchor="eligible-to-locally-served-dns-zones-note"><name>Eligible to Locally-Served DNS Zones Note</name>
+<t>IANA is requested to add the following note to the &quot;IPv6 Special-Purpose Address Space&quot; and &quot;IPv4 Special-Purpose Address Space&quot; registries:</t>
+
+<dl spacing="compact">
+<dt>Eligible to Locally-Served DNS Zones:</dt>
+<dd>A boolean value indicating whether the IP address block is to be added to the Locally-Served DNS Zones IANA
+registry.</dd>
+</dl>
+</section>
+
+<section anchor="ipv6-locally-served-dns-zone-registry-note"><name>IPv6 Locally-Served DNS Zone Registry Note</name>
+<t>IANA is requested to add the following note to the &quot;IPv6 Special-Purpose Address Space&quot; registry:</t>
+
+<dl spacing="compact">
+<dt>Note:</dt>
+<dd>IANA has to add relevant entries for &quot;Eligible to Locally-Served DNS Zones&quot;
+set to &quot;True&quot; in the IPv6 Locally-Served DNS Zone Registry.</dd>
+</dl>
+</section>
+
+<section anchor="ipv4-locally-served-dns-zone-registry-note"><name>IPv4 Locally-Served DNS Zone Registry Note</name>
+<t>IANA is requested to add the following note to the &quot;IPv4 Special-Purpose Address Space&quot; registry:</t>
+
+<dl spacing="compact">
+<dt>Note:</dt>
+<dd>IANA has to add relevant entries for &quot;Eligible to Locally-Served DNS Zones&quot;
+set to &quot;True&quot; in the IPv4 Locally-Served DNS Zone Registry.</dd>
+</dl>
+</section>
+
+<section anchor="initial-ipv6-locally-served-dns-zone-registry"><name>Initial IPv6 Locally-Served DNS Zone Registry</name>
+<t>TBC.</t>
+</section>
+
+<section anchor="initial-ipv4-locally-served-dns-zone-registry"><name>Initial IPv4 Locally-Served DNS Zone Registry</name>
+<t>TBC.</t>
+</section>
+</section>
+
+<section anchor="operational-considerations"><name>Operational Considerations</name>
+<t>TBC.</t>
+</section>
+
+<section anchor="security-considerations"><name>Security Considerations</name>
+<t>This document does not add new security risks other than those already discussed in {{RFC6303}}, {{!RFC6890}}, and {{!RFC9637}}.</t>
+</section>
+
+<section anchor="iana-considerations"><name>IANA Considerations</name>
+<t>Sections 6063-updates and 6890-updates include actions for IANA. These actions are not repeated here.</t>
+</section>
+
+</middle>
+
+<back>
+<references><name>References</name>
+<references><name>Normative References</name>
+<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
+<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6303.xml"/>
+</references>
+<references><name>Informative References</name>
+<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
+<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8499.xml"/>
+</references>
+</references>
+
+<section anchor="acknowledgements" numbered="false"><name>Acknowledgements</name>
+</section>
+
+</back>
+
+</rfc>
