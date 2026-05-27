@@ -2,7 +2,7 @@
 title = "Updates to Locally Served DNS Zones and IP Special-Purpose Address Space Registries"
 abbrev = "Updates to RFCs 6303 and 6890"
 docName = "@DOCNAME@"
-updates = [6603, 6890]
+updates = [6303, 6890]
 ipr = "trust200902"
 area = "OPS"
 workgroup = "DNSOP"
